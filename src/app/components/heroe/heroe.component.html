@@ -1,0 +1,43 @@
+<h1 class="animated fadeIn">{{heroe.nombre | uppercase}} <small>({{heroe.aparicion}})</small></h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
+        <br><br>
+        <a [routerLink]="['/informaciones']" class="btn btn-outline-danger btn-block">Regresar</a>
+        <h4 *ngIf="heroe.recursos">Otros Recursos</h4>
+        <ul *ngIf="heroe.recursos">
+            <li *ngFor="let item of heroe.recursos"> <a [href]="item.recurso" target="_blank">{{item.titulo}}</a></li>
+        </ul>
+    </div>
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr>
+        <p>{{heroe.bio}}</p>
+
+        <!-- Título "Beneficios" y lista de beneficios -->
+        <h4>Beneficios</h4>
+        <ul>
+            <li *ngFor="let beneficio of heroe.beneficios">{{beneficio}}</li>
+        </ul>
+
+        <h4 *ngIf="heroe.explicaciones">Explicación</h4>
+        <ul *ngIf="heroe.explicaciones">
+            <li *ngFor="let paso of heroe.explicaciones">
+                <h5>{{paso.titulo}}</h5>
+                <p>{{paso.explicacion}}</p>
+                <app-code-display *ngIf="paso.code" [lenguaje]="paso.lenguaje" [codigo]="paso.code"></app-code-display>
+                <br>
+                <ul *ngIf="paso.imagenes">
+                    <li *ngFor="let imagen of paso.imagenes">
+                        <img [src]="imagen" class="img-fluid">
+                    </li>
+                </ul>
+
+                <!--                 <code *ngIf="paso.code"  class="language-none">{{paso.code}}</code> -->
+            </li>
+        </ul>
+
+    </div>
+
+</div>

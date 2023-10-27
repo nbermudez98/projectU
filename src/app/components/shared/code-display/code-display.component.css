@@ -1,0 +1,37 @@
+.code-container {
+    position: relative;
+}
+
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Asegura que el contenedor tenga un ancho máximo y está centrado */
+.code-container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    text-align: center;
+}
+
+/* Estiliza el elemento <pre> para ajustar su contenido */
+.code-pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Aplica estilos al elemento <code> */
+.code {
+    padding: 1rem;
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #ccc;
+    /* Puedes personalizar los bordes */
+    background-color: #f8f8f8;
+    /* Puedes personalizar el fondo */
+    border-radius: 5px;
+    font-family: monospace;
+    /* Puedes personalizar la fuente */
+}

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACj0lEQVR4AWIYuiChnwvAazlE0REEUTS2jb+LvY5texXbtm3btm3btm3z8+Wl42R+9ehkcTejd7urZmqI5ztx/kdgPFKbrCAPCP7iEVlDGpIEbgcPIm8ITPKBjCKJnIYXMV6taZ6RcnbDm5MggQt0JZbD4TLdTW+7buW5+i1CpyV7MWbrSYzfdgqD1h9B24W7UWXcOuToPk+SqKRvOKHmiZpNwq6LdxAKhcLy6NU7SeAFSSYJDJJWvuzIFRWy5ewt5Om/GPEaj0eM+mORtPkkZO46B0WHLkeFMWt0pZgUdvXSqxa/yQT4AwHcfvYa0eqNcdILXuNd4EdGujFbt7lq9dwFNxqytZHACumm9J1mKYGd7AEXBHYYCMgfnCh1R+P52w+qDBV1ddbzjkT6e7BAR+PZ2xEMBtVOnLnzFH1WH0LBwcsQq+E4OxKpfhfwmL2x8JBl2H7+NndCiSg+en1Ye/I6CvGcBYGssoCGZC0mo9qE9Ri1+TjO33umRLg76LHigC2BOAROKD5sBd5/8sLr9yNJ80lm7vH83YSPnErM3HNO7USRIcvNjOtIfwuscSowaN0RJVBqxCrdtXuMXsOGTgVWHruqBOSBpOhoJJCAfLAbnpuzwevz496Lt4hUZ7R0rZ94ws2DUVLInkt3seH0DUzddQb91xxWI7nbsv1YcvgyPjM8EAyi+sT1OtlZ0jRMRJ4Y3Ri5zmgVfvXRCxX22whWwUeuP0Tpkdrav/mxekmiHIEAt3iUGsFpO85EOhK30Xizpapp9q+oK4HLDLPyT/iV7m6GE1t/xpXICwfBb/TbrpdIRiYRr4VgP5klN5w9kdZkB3lHjD6ve0hH8mVStO4nMoEsAWIdKJYBiw1FAADS+nP0/YhMRQAAAABJRU5ErkJggg==" alt="" >
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" routerLinkActive="active">
+                    <!--Active mas blanco el menú-->
+                    <a class="nav-link" aria-current="page" [routerLink]="['home']">Inicio</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['informaciones']">Catálogo</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['about']">Acerca de</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Buscar" (keyup.enter)="buscar(buscarTexto.value)" #buscarTexto>
+            <button class="btn btn-outline-primary my-2 my-sm-0" (click)="buscar(buscarTexto.value)" type="button">Buscar</button>
+        </form>
+    </div>
+</nav>
